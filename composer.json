@@ -38,7 +38,7 @@
     },
     "description": "awmports/ezcunittest Component",
     "homepage": "https://github.com/AWMports/ezcUnitTest",
-    "license": "apache2",
+    "license": "Apache-2.0",
     "name": "awmports/ezcunittest",
     "type": "library"
 }

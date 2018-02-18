@@ -1,6 +1,6 @@
 <?php
 /**
- * File contaning the ezcTestConstraintSimilarImage class.
+ * File contaning the \AWMports\ezcUnitTest\ConstraintSimilarImage class.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -30,7 +30,10 @@
  * @package UnitTest
  * @version //autogentag//
  */
-class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
+
+namespace AWMports\ezcUnitTest;
+
+class ConstraintSimilarImage extends \PHPUnit_Framework_Constraint
 {
     /**
      * Filename of the image to compare against.
@@ -58,7 +61,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
      * 
      * @param string $filename Filename of the image to compare against.
      * @param int $delta Maximum delta between images.
-     * @return ezcConstraintSimilarImage
+     * @return \AWMports\ezcUnitTest\Constraint\ConstraintSimilarImage
      */
     public function __construct( $filename, $delta = 0 )
     {
@@ -70,7 +73,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
         }
         else
         {
-            throw new ezcBaseFileNotFoundException( $filename );
+            throw new \AWMports\ezcBase\Exceptions\FileNotFoundException( $filename );
         }
 
         $this->delta = (int) $delta;
@@ -90,7 +93,7 @@ class ezcTestConstraintSimilarImage extends PHPUnit_Framework_Constraint
              !is_file( $other ) ||
              !is_readable( $other ) )
         {
-            throw new ezcBaseFileNotFoundException( $other );
+            throw new \AWMports\ezcBase\Exceptions\FileNotFoundException( $other );
         }
 
         $descriptors = array( 

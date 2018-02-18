@@ -1,6 +1,6 @@
 <?php
 /**
- * File contaning the ezcTestImageCase.
+ * File contaning the \AWMports\ezcUnitTest\ImageCase.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -30,7 +30,10 @@
  * @package UnitTest
  * @version //autogentag//
  */
-abstract class ezcTestImageCase extends ezcTestCase
+
+namespace AWMports\ezcUnitTest;
+
+abstract class TestImageCase extends \AWMports\ezcUnitTest\TestCase
 {
     /**
      * Asserts that the compared images are same
@@ -46,7 +49,7 @@ abstract class ezcTestImageCase extends ezcTestCase
      */
     public function assertImageSame( $expectedImage, $image, $message = '' )
     {
-        $constraint = new ezcTestConstraintSimilarImage( $expectedImage );
+        $constraint = new \AWMports\ezcUnitTest\ConstraintSimilarImage( $expectedImage );
 
         if ( ! $constraint->evaluate( $image ) ) {
             self::failConstraint( $constraint, $image, $message );
@@ -72,7 +75,7 @@ abstract class ezcTestImageCase extends ezcTestCase
      */
     public function assertImageSimilar( $expectedImage, $image, $message = '', $maxDifference = 0 )
     {
-        $constraint = new ezcTestConstraintSimilarImage( $expectedImage, $maxDifference );
+        $constraint = new \AWMports\ezcUnitTest\ConstraintSimilarImage( $expectedImage, $maxDifference );
 
         self::assertThat( $image, $constraint, $message );
     }

@@ -29,7 +29,10 @@
  * @package Feed
  * @subpackage Tests
  */
-abstract class ezcTestRegressionTest extends ezcTestCase
+
+namespace AWMports\ezcUnitTest;
+
+abstract class RegressionTest extends \AWMports\ezcUnitTest\TestCase
 {
     /**
      * How to sort the test files: 'mtime' sorts by modification time, any other

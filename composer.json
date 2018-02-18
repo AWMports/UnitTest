@@ -1,0 +1,44 @@
+{
+    "authors": [
+        {
+            "name": "Sergey Alexeev"
+        },
+        {
+            "name": "Sebastian Bergmann"
+        },
+        {
+            "name": "Jan Borsodi"
+        },
+        {
+            "name": "Raymond Bosman"
+        },
+        {
+            "name": "Frederik Holljen"
+        },
+        {
+            "name": "Kore Nordmann"
+        },
+        {
+            "name": "Derick Rethans"
+        },
+        {
+            "name": "Vadym Savchuk"
+        },
+        {
+            "name": "Tobias Schlitt"
+        },
+        {
+            "name": "Alexandru Stanoi"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AWMports\\ezcUnitTest\\": "src/"
+        }
+    },
+    "description": "awmports/ezcunittest Component",
+    "homepage": "https://github.com/AWMports/ezcUnitTest",
+    "license": "apache2",
+    "name": "awmports/ezcunittest",
+    "type": "library"
+}

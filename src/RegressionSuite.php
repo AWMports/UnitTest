@@ -27,7 +27,10 @@
 /**
  * @package UnitTest
  */
-class ezcTestRegressionSuite extends PHPUnit_Framework_TestSuite
+
+namespace AWMports\ezcUnitTest;
+
+class RegressionSuite extends \PHPUnit_Framework_TestSuite
 {
     public function __construct( $theClass = '', $name = '' )
     {
@@ -90,13 +93,13 @@ class ezcTestRegressionSuite extends PHPUnit_Framework_TestSuite
 
         $names = array();
 /*
-        if ( $theClass->getName() !== 'ezcTestRegressionTest'
-             && !$theClass->isSubclassOf( 'ezcTestRegressionTest' ) )
+        if ( $theClass->getName() !== 'AWMports\UnitTest\RegressionTest'
+             && !$theClass->isSubclassOf( 'AWMports\UnitTest\RegressionTest' ) )
         {
             $this->addTest(
                 new PHPUnit_Framework_Warning(
                     sprintf(
-                        'Class "%s" is not a subclass of ezcTestRegressionTest.',
+                        'Class "%s" is not a subclass of AWMports\UnitTest\RegressionTest.',
                         $theClass->getName()
                         )
                     )

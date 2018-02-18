@@ -1,6 +1,6 @@
 <?php
 /**
- * File contaning the abstract ezcTestCase class.
+ * File contaning the abstract \AWMports\ezcUnitTest\TestCase class.
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -30,7 +30,10 @@
  * @package UnitTest
  * @version //autogentag//
  */
-abstract class ezcTestCase extends PHPUnit_Framework_TestCase
+
+namespace AWMports\ezcUnitTest;
+
+abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
     /**
      * Do not mess with the temp dir, otherwise the removeTempDirectory might

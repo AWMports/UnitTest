@@ -34,3 +34,24 @@ It is a *fantastic* collection of re-usable PHP libraries and their code also
 is one of the better ways to learn about PHP object oriented programming, with
 actual real-world implementations of many techniques I confess I really did not
 have a good grasp on before reading their code.
+
+Minor Changes from Upstream
+===========================
+
+Within the `src/` directory, all classes are now in a single directory and thus
+also within a single namespace, `\AWMports\ezcUnitTest`.
+
+
+Library and Application Porting
+-------------------------------
+
+To port existing libraries and applications from zetacomponents/UnitTest to
+AWMports/ezcUnitTest:
+
+    Zeta Components Class Name        Namespaced Equivalent
+    ------------------------------------------------------------------------------
+    ezcTestCase                   --> \AWMports\ezcUnitTest\TestCase
+    ezcTestImageCase              --> \AWMports\ezcUnitTest\TestImageCase
+    ezcTestConstraintSimilarImage --> \AWMports\ezcUnitTest\ConstraintSimilarImage
+    ezcTestRegressionSuite        --> \AWMports\ezcUnitTest\RegressionSuite
+    ezcTestRegressionTest         --> \AWMports\ezcUnitTest\RegressionTest
